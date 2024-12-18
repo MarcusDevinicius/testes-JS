@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+    width: 400px;
+}
+
+main {
+    background-color: gray;
+    margin: 20px;
+    height: 94vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+ul {
+    list-style-type: none;
+    padding: 30px 20px;
+    justify-self: self-start;
+}
+
+li {
+    padding: 8px;
+    background-color: white;
+    margin-top:10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.imgs {
+    justify-self: center;
+}

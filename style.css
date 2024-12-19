@@ -8,7 +8,7 @@
 }
 
 img {
-    width: 400px;
+    width: 600px;
 }
 
 main {
@@ -19,7 +19,7 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
-ul {
+div.games {
     list-style-type: none;
     padding: 30px 20px;
     justify-self: self-start;
@@ -35,4 +35,52 @@ li {
 
 .imgs {
     justify-self: center;
+}
+
+
+.lista-sections {
+    align-content: center;
+}
+
+section {
+    display: none;
+    background-color: red;
+}
+
+section.ativo {
+    display: block;
+}
+
+dt {
+    background-color: rgb(225, 202, 202);
+    padding: 20px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px 3px;
+}
+
+dt:hover {
+    transform: translate(10px, 6px);
+    box-shadow: none;
+    
+}
+
+dt::after {
+    content: '↴';
+    margin-left: 15px;
+    color: rgb(9, 42, 103);
+}
+
+dt.ativo::after {
+    content: '⬏';
+}
+
+ul {
+    list-style-type: none;
+    display: none;
+}
+
+ul.ativo {
+    display: block;
 }

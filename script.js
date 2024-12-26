@@ -1,26 +1,31 @@
-const listaGames = document.querySelectorAll('.lista-games li')
-const listaSections = document.querySelectorAll('.lista-sections section')
+function mostrarEsconderGames() {
+    const btnMostrarGames = document.querySelector('.titulo-lista');
 
-function relacionaImg(index) {
-    listaSections.forEach((section) => {
-        section.classList.remove('ativo')
-    })
-    listaSections[index].classList.add('ativo')
+    function mostrarLista() {
+        const itensLista = document.querySelector('.lista-games');
+        itensLista.classList.toggle('ativo')
+        btnMostrarGames.classList.toggle('ativo')
+    }
+
+    btnMostrarGames.addEventListener('click', mostrarLista);
 }
 
-listaGames.forEach((game, index) => {
-    game.addEventListener('click', () => {
-        relacionaImg(index)
-    })
-    
+mostrarEsconderGames()
+
+const opGames = document.querySelectorAll('.lista-games li');
+const imgsGames = document.querySelectorAll('.lista-sections section');
+
+function selecionaImg(index) {
+    imgsGames.forEach((img) => {
+    img.classList.remove('ativo');
 })
+    imgsGames[index].classList.add('ativo');
 
-const gamesFav = document.querySelector('dt')
-const listaGamesFav = document.querySelector('.lista-games')
-
-function callBackList() {
-    gamesFav.classList.toggle('ativo')
-    listaGamesFav.classList.toggle('ativo')
 }
 
-gamesFav.addEventListener('click', callBackList)
+opGames.forEach((games, index) => {
+    games.addEventListener('click', () => {
+        selecionaImg(index)
+    })
+});
+

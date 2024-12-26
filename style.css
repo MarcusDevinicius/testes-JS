@@ -17,12 +17,17 @@ main {
     height: 94vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
 }
 
 div.games {
     list-style-type: none;
     padding: 30px 20px;
-    justify-self: self-start;
+    justify-self: center;
+}
+
+ul {
+    list-style-type: none;
 }
 
 li {
@@ -31,6 +36,12 @@ li {
     margin-top:10px;
     border-radius: 7px;
     cursor: pointer;
+    transition: background .3s ease-in-out;
+}
+
+li:hover {
+    background-color: rgb(225, 202, 202);
+    font-weight: bold;
 }
 
 .imgs {
@@ -42,15 +53,6 @@ li {
     align-content: center;
 }
 
-section {
-    display: none;
-    background-color: red;
-}
-
-section.ativo {
-    display: block;
-}
-
 dt {
     background-color: rgb(225, 202, 202);
     padding: 20px 15px;
@@ -58,6 +60,7 @@ dt {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 2px 2px 0px 3px;
+    margin-bottom: 20px;
 }
 
 dt:hover {
@@ -76,11 +79,23 @@ dt.ativo::after {
     content: '⬏';
 }
 
-ul {
-    list-style-type: none;
+.lista-games {
+    /*display: none;*/
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+    transition: .3s;
+}
+
+.lista-games.ativo {
+    /*display: block;*/
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.lista-sections section{
     display: none;
 }
 
-ul.ativo {
+.lista-sections section.ativo {
     display: block;
 }
